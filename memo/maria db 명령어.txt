@@ -1,0 +1,3 @@
+https://heaven0713.tistory.com/31
+
+bin -> mysql -u root -p

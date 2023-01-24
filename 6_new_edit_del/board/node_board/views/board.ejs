@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple memo</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <h1>Simple Memo</h1>
+
+    <input type="button" value="new Memo" onclick="javascript:location.href='/newMemo'">
+    <table border='1'>
+      <tr>
+        <th>Writer</th>
+        <th>Title</th>
+        <th>Memo</th>
+        <th>Image</th>
+        <th>Date</th>
+        <th>Edit</th>
+      </tr>
+      <!-- forEach 매개변수로 (배열 내 현재 값, 배열 내 현재 값의 인덱스) -->
+      <% rows.forEach((row, index)=>{ %>
+        <tr>
+          <td><%=row.WRITER%></td>
+          <td><%=row.TITLE%></td>
+          <td><%=row.CONTENT%></td>
+          <td><img src = '<%=row.IMAGE%>' width = "200px"> </td>
+          <td><%=row.UPDATED_AT%></td>
+          <td>
+            <input type="button" onclick="javascript:location.href='/updateMemo?id=<%=row.ID%>'" value="Edit">
+            <input type="button" onclick="javascript:location.href='/deleteMemo?id=<%=row.ID%>'" value="Del">
+          </td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>

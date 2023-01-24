@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h3>측정시간</h3>
+    <p><%= time %></p>
+    <h3>온도</h3>
+    <p> <%= tem %></p>
+    <h3>강수형태</h3>
+    <p> <%= rain %></p>
+
+    <h3> 강수형태 코드 </h3>
+    <table border ='1' width = '800'>
+        <tr style="background-color:lightgrey">
+            <th width='50'>0</th>
+            <th width='50'>1</th>
+            <th width='50'>2</th>
+            <th width='50'>3</th>
+            <th width='50'>5</th>
+            <th width='50'>6</th>
+            <th width='50'>7</th>
+        </tr> 
+        <tr>
+            <td>없음</td>
+            <td>비</td>
+            <td>비/눈</td>
+            <td>눈</td>
+            <td>빗방울</td>
+            <td>빗방울눈날림</td>
+            <td>눈날림</td>
+        </tr>
+    </table>
+  </body>
+</html>

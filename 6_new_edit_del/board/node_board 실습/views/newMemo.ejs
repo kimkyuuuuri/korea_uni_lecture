@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='utf-8'>
+    <meta charset="utf-8">
+    <head>
+        <title>New Memo</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>New Memo</h1>
+        <% if(typeof errs !== "undefined") { %>
+            <% errs.forEach((err)=>{%>
+                <h4 style="color: red;"><%=err.param%> : <%=err.msg%></h4>
+            <% }) %>
+        <% } %>
+        <form method="POST" action="/newMemo">
+            <label for="writer"> writer </label><br>
+            <input type ="text" id= "writer" name="writer"><br><br>
+            <label for="title"> title </label><br>
+            <input type ="text" id= "title" name="title"><br><br>
+            <label for="content"> memo </label><br>
+            <textarea name="content" maxlength="300"></textarea><br>
+            <img id="img-preview" src="" style="display: none;" width="250" alt="미리보기">
+            <input id="img-url" type="hidden" name="url"><br>
+            <label for="img"> upload photo </label><br>
+            <input id ='img' type ='file' name="userfile"><br>
+            <input type="submit" value="submit"><br><br><br>
+        </form>
+        <input type="button" value="back" onclick="javascript:location.href='/board'">
+    </body>
+</html>

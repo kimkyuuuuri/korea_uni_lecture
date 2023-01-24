@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+  </head>
+  <body>
+    <h1>Login</h1>
+  
+      <form method="POST" action="/login">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="login">
+      </form>
+
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="javascript:location.href='/regis'" value="registration">
+    <input type="button" onclick="javascript:location.href='/'" value="back">
+
+  </body>
+</html>

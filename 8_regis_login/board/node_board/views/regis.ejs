@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+  </head>
+  <body>
+    <h1>Registration</h1>
+        
+        <form method="POST" action="/regis">
+          <label for="id">ID:</label><br>
+          <input type="text" id="id" name="id"><br>
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password"><br>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <input type="submit" value="join">
+        </form>
+
+    <br>
+    <br>
+    <br>
+    <input type="button" value="back" onclick="javascript:location.href='/login'">
+
+  </body>
+</html>

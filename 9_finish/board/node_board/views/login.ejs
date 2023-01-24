@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>Login</h1>
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <input onclick="loginAction()" type="button" value="login">
+        
+      <!-- <form method="POST" action="/login">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="login">
+      </form> -->
+
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="javascript:location.href='/regis'" value="registration">
+    <input type="button" onclick="javascript:location.href='/'" value="back">
+
+
+    <script>
+
+      const loginAction = () => {
+        const login_id = document.querySelector('#id').value;
+        const login_pw = document.querySelector('#password').value;
+
+
+        axios.post('/login', 
+          {
+            id       : login_id,
+            password : login_pw
+          },
+        )
+        .then(function (res) {
+          console.log(res.data.status);
+          console.log(res.data.message);
+          if (res.data.status == true) {
+            document.cookie = `jwt_token=${res.data.token}`;
+            document.cookie = `token_user=${res.data.username}`;
+            alert(`${res.data.username}님 환영합니다`);
+            location.href = '/'
+          } else {
+            alert(res.data.message);
+          }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+      }
+
+    </script>
+  </body>
+</html>

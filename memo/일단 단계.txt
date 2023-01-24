@@ -1,0 +1,49 @@
+html , ejs 설명
+-------------
+게시판 설명, DB 구축
+1. maria db 테이블 만들기
+2. ppt 보며 express 구축
+3. firstPage 만들기 (index.js, firstPage.ejs)
+4. boardPage 만들기 (index.js, board.ejs, db.js)
+
+새 메모, 수정, 삭제
+1. 새 메모 페이지 만들기 (index.js(GET), newMemo.ejs)
+2. 업데이트 메모 만들기 (index.js(GET), db.js, updateMemo.ejs)
+3. 새 메모 기능 (index.js(POST), db.js)
+4. 메모 수정 기능 (index.js(POST), db.js)
+5. 메모 삭제 기능 (index.js(POST), db.js)
+
+사진, search
+1. 사진 기능
+굳이 안나눠도 되지만 보여주갔으
+post.js 만듬 (app.js에 추가정보 필요) 
+npm i multer
+npm i path
+npm i fs
+꼭 newMemo.ejs와 updateMemo.ejs 경로 바꾸어 주어야 함
+enctype="multipart/form-data" 도 추가
+2. search기능
+board.ejs logout 빼고 주석 다 푸
+index.js(POST), db.js
+
+로그인 + 회원가입
+1.로그인
+login.ejs
+index.js
+db.js
+2. 회원가입
+registration.ejs
+index.js (npm i crypto)
+db.js
+
+토큰인증
+(dotenv, cookie-parser, jwt토큰 설명)
+(쿠키 세션 설명)
+npm i dotenv
+npm i jsonwebtoken
+
+
+app.js에 dotenv config어쩌고 해줘야함
+module 폴더 안에 json-response.js 생성
+login.ejs, regis.ejs <두개 다 axios 설명..>
+마지막으로 board.ejs 로그아웃 function 까지
